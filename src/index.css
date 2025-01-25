@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  scroll-behavior: smooth;
+}
+.shadow {
+  box-shadow: 0 0 5px rgb(0, 188, 235);
+}
+.shadow1 {
+  box-shadow: 0 0 0 20px rgb(11, 199, 246);
+}
+.card-hover:hover {
+  box-shadow: 0 0 30px rgb(27, 209, 255);
+  transform: translate(3px, -3px) scale(1.01);
+  transition: all 0.2s;
+}
+.btn-hover:hover {
+  box-shadow: 0 0 20px rgb(27, 209, 255);
+  transition: all 0.35s;
+}
+.letTalk:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 0 30px cyan, 0 0 40px blue;
+  transition: 0.3s;
+}
+.wel {
+  text-shadow: 0 0 50px cyan, 0 0 75px rgb(5, 207, 207),
+    0 0 100px rgb(87, 87, 244);
+}
+.logo-sha {
+  box-shadow: 0 0 5px rgb(76, 255, 255);
+}
+.so-logo {
+  box-shadow: 0 0 10px rgb(56, 165, 254);
+}
+.so-logo:hover {
+  box-shadow: 0 0 30px rgb(54, 186, 242);
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+.logo-sha:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgb(87, 255, 255);
+  transition: 0.2s;
+}
+.logo-wel {
+  box-shadow: 0 0 15px cyan;
+}
+.logo-wel:hover {
+  box-shadow: 0 0 30px cyan;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.logo {
+  background: linear-gradient(
+    to left,
+    rgb(1, 187, 187),
+    gray,
+    gray,
+    gray,
+    rgb(78, 162, 246)
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: name 5s linear infinite;
+}
+.name {
+  background: linear-gradient(
+    to left,
+    rgb(67, 255, 255),
+    rgb(24, 102, 238),
+    rgb(24, 102, 238),
+    rgb(24, 102, 238),
+    rgb(73, 255, 255)
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: name 2s linear infinite;
+}
+.talk {
+  background: linear-gradient(
+    to right,
+    rgb(3, 225, 225),
+    rgb(20, 134, 255),
+    cyan
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact {
+  background: linear-gradient(
+    to right,
+    rgb(1, 171, 171),
+    cyan,
+    rgb(46, 196, 255),
+    rgb(34, 167, 255)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes name {
+  to {
+    background-position: 200%;
+  }
+}
+.top-btn {
+  animation: float 0.4s ease-in-out;
+}
+.top-btn:hover {
+  transform: translateY(-5px);
+  transition: 0.4s;
+}
+@keyframes float {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: conic-gradient(from var(--angle), transparent, cyan 50%);
+  animation: spin 5s linear infinite;
+  border-radius: 12px;
+}
+.spin-pf {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: repeating-conic-gradient(
+    from var(--angle),
+    cyan 0%,
+    cyan 15%,
+    transparent 10%,
+    transparent 40%,
+    cyan 50%
+  );
+  animation: spin 8s linear infinite;
+  border-radius: 100%;
+}
+.spin-ser {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: repeating-conic-gradient(
+    from var(--angle),
+    cyan,
+    rgb(17, 206, 244),
+    rgb(210, 210, 252),
+    rgb(81, 118, 232),
+    cyan
+  );
+  animation: spin 6s linear infinite;
+  border-radius: 12px;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
