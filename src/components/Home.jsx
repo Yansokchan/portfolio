@@ -106,7 +106,7 @@ const Home = () => {
               Khmum in Cambodia with 3months of experience.
             </p>
             <div className="flex md:gap-5 310:gap-4 items-center">
-              <a href="cv.pdf" download="sokchanyan.pdf">
+              <a href="/portfolio/cv.pdf" download="sokchanyan.pdf">
                 <button className="b1 btn btn-hover text-white glass bg-gradient-to-r from-cyan-300 to-blue-500">
                   Download My CV
                 </button>
